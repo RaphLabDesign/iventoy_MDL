@@ -13,16 +13,6 @@ services:
       - config:/app/data
     environment:
       - AUTO_START_PXE=true
-    
-
-build:
-  build:
-    context: .
-    dockerfile: Dockerfile
-    labels:
-      IVENTOY: 1.0.19
-    args:
-      IVENTOY: 1.0.19
 
 volumes:
   isos:
