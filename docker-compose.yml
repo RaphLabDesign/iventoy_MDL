@@ -15,24 +15,24 @@ services:
       - AUTO_START_PXE=true
     
 
+build:
   build:
-    build:
-      context: .
-      dockerfile: Dockerfile
-      labels:
-        IVENTOY: 1.0.19
-      args:
-        IVENTOY: 1.0.19
+    context: .
+    dockerfile: Dockerfile
+    labels:
+      IVENTOY: 1.0.19
+    args:
+      IVENTOY: 1.0.19
 
-  volumes:
-    isos:
-      external:
-        name: iventoy-isos
-    config:
-      external:
-        name: iventoy-config
+volumes:
+  isos:
+    external:
+      name: iventoy-isos
+  config:
+    external:
+      name: iventoy-config
 
-  networks:
-    bridge:
-      external:
-        name: bridge
+networks:
+  bridge:
+    external:
+      name: bridge
